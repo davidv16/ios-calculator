@@ -3,6 +3,7 @@ import { View, StyleSheet } from "react-native";
 
 //components import 
 import Button from '../components/Button';
+import Display from "../components/Display";
 
 
 
@@ -11,6 +12,10 @@ export const HomeScreen = () => {
     /* Main container for the app */
     /* row styling from the StyleSheet below */
     <View style={styles.container}>
+      
+      {/* Display component to render the outcome from the calc */}
+      <Display outcome='0'/>
+
       {/* first row of buttons */}
       {/*   AC       +/-       %       /   */}
       {/* row styling from StyleSheet below */}
