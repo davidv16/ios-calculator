@@ -38,23 +38,25 @@ export default function Button(props) {
 }
 
 {/* Stylesheet for the buttons */}
-{/* Size and radius styling for buttons and button text */}
-{/* Special styling for the large Zero button and text */}
 const styles = StyleSheet.create({
+  //styling for all the buttons
   button: {
     height: 76,
     width: 76,
     borderRadius: 38,
   },
+  //styling for the button text
   buttonText: {
     textAlign: 'center',
     fontSize: 32,
   },
+  //styling for the large zero button
   largeButton: {
     width: 170,
     height: 76,
     borderRadius: 38,
   },
+  //styling for the text in the large zero button
   largeButtonText: {
     paddingLeft: 27,
     fontSize: 32,

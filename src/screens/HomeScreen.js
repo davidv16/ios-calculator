@@ -8,10 +8,14 @@ import Button from '../components/Button';
 
 export const HomeScreen = () => {
   return (
+    /* Main container for the app */
+    /* row styling from the StyleSheet below */
     <View style={styles.container}>
       {/* first row of buttons */}
       {/*   AC       +/-       %       /   */}
+      {/* row styling from StyleSheet below */}
       <View style={styles.row}>
+        {/* Buttons and props passed down to button component */}
         <Button
           backgroundColor="#A5A5A5"
           color="black"
@@ -37,6 +41,7 @@ export const HomeScreen = () => {
       {/* second row of buttons */}
       {/*   7       8       9       x   */}
       <View style={styles.row}>
+        {/* Buttons and props passed down to button component */}
         <Button
           backgroundColor="#333333"
           color="white"
@@ -63,6 +68,7 @@ export const HomeScreen = () => {
       {/* third row of buttons */}
       {/*   4       5       6       -   */}
       <View style={styles.row}>
+        {/* Buttons and props passed down to button component */}
         <Button
           backgroundColor="#333333"
           color="white"
@@ -89,6 +95,7 @@ export const HomeScreen = () => {
       {/* fourth row of buttons */}
       {/*   1       2       3       +   */}
       <View style={styles.row}>
+        {/* Buttons and props passed down to button component */}
         <Button
           backgroundColor="#333333"
           color="white"
@@ -116,6 +123,7 @@ export const HomeScreen = () => {
       {/* fifth row of buttons */}
       {/*   0       .       =   */}
       <View style={styles.row}>
+        {/* Buttons and props passed down to button component */}
         <Button
           largeButton
           backgroundColor="#333333"
@@ -137,7 +145,10 @@ export const HomeScreen = () => {
   );
 };
 
+
+/* Styles for the home screen */
 const styles = StyleSheet.create({
+  //styling for the main container
   container: {
     flex: 1,
     justifyContent: 'flex-end',
@@ -145,13 +156,11 @@ const styles = StyleSheet.create({
     padding: 10,
     paddingBottom: 14,
   },
+  //Styling for the rows of buttons
   row: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginTop: 5,
     marginBottom: 7,
-  },
-  icon: {
-    textAlign: 'center'
-  },
+  }
 });
