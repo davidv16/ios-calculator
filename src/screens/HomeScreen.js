@@ -28,7 +28,6 @@ export const HomeScreen = () => {
           text="%"
         />
         <Button
-          orange
           backgroundColor='#FF9404'
           color='white'
           text="÷"
@@ -54,7 +53,6 @@ export const HomeScreen = () => {
           text="9"
         />
         <Button
-          orange
           backgroundColor='#FF9E0C'
           color="white"
           text="x"
@@ -81,7 +79,6 @@ export const HomeScreen = () => {
           text="6"
         />
         <Button
-          orange
           backgroundColor='#FF9E0C'
           color="white"
           text="-"
@@ -108,7 +105,6 @@ export const HomeScreen = () => {
           text="3"
         />
         <Button
-          orange
           backgroundColor='#FF9E0C'
           color="white"
           text="+"
@@ -132,7 +128,6 @@ export const HomeScreen = () => {
           text="."
         />
         <Button
-          orange
           backgroundColor="#FF9E0C"
           color="white"
           text="="

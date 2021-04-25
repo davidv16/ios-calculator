@@ -6,13 +6,22 @@ export default function Button(props) {
     <View>
       <TouchableHighlight
         underlayColor={'#C9C9C9'}
-        style={
-          {backgroundColor: props.backgroundColor,
-          justifyContent: 'center',}
-        }
+        style={[
+          styles.button,
+          {
+            backgroundColor: props.backgroundColor,
+            justifyContent: 'center',
+          }
+        ]}
       >
         <View>
-          <Text>
+          {/* button text passed by props from HomeScreen */}
+          <Text
+            style={
+              styles.text,
+              {color: props.color}
+            }
+          >
             {props.text}
           </Text>
         </View>
