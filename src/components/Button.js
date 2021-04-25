@@ -9,6 +9,7 @@ export default function Button(props) {
       {/* checks if button being used is the Large Zero one and renders
       different styling if so.  */}
       <TouchableHighlight
+        onPress={props.function}
         style={[
           props.largeButton ? styles.largeButton : styles.button,
           {

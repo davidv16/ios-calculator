@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { View, StyleSheet } from "react-native";
 
 //components import 
@@ -8,6 +8,31 @@ import Display from "../components/Display";
 
 
 export const HomeScreen = () => {
+  const initialState = {
+    display: 0,
+  };
+
+  const [state, setstate] = useState(initialState);
+
+  /* Methods */
+  function clearButton() {}
+
+  function invertButton() {}
+
+  function precentButton() {}
+
+  function operatorButtons(operator) {}
+
+  function concatInt(int) {}
+
+  function dotButton() {}
+
+  function resultButton() {}
+
+
+
+
+  /* View */
   return (
     /* Main container for the app */
     /* row styling from the StyleSheet below */
@@ -25,21 +50,25 @@ export const HomeScreen = () => {
           backgroundColor="#A5A5A5"
           color="black"
           text={'AC'}
+          function={() => clearButton()}
         />
         <Button
           backgroundColor="#A5A5A5"
           color="black"
           text="+/-"
+          function={() => invertButton()}
         />
         <Button
           backgroundColor="#A5A5A5"
           color="black"
           text="%"
+          function={() => precentButton()}
         />
         <Button
           backgroundColor='#FF9404'
           color='white'
           text="÷"
+          function={() => operatorButtons()}
         />
       </View>
 
@@ -51,21 +80,25 @@ export const HomeScreen = () => {
           backgroundColor="#333333"
           color="white"
           text="7"
+          function={() => concatInt()}
         />
         <Button
           backgroundColor="#333333"
           color="white"
           text="8"
+          function={() => concatInt()}
         />
         <Button
           backgroundColor="#333333"
           color="white"
           text="9"
+          function={() => concatInt()}
         />
         <Button
           backgroundColor='#FF9E0C'
           color="white"
           text="x"
+          function={() => operatorButtons()}
         >
         </Button>
       </View>
@@ -78,21 +111,25 @@ export const HomeScreen = () => {
           backgroundColor="#333333"
           color="white"
           text="4"
+          function={() => concatInt()}
         />
         <Button
           backgroundColor="#333333"
           color="white"
           text="5"
+          function={() => concatInt()}
         />
         <Button
           backgroundColor="#333333"
           color="white"
           text="6"
+          function={() => concatInt()}
         />
         <Button
           backgroundColor='#FF9E0C'
           color="white"
           text="-"
+          function={() => operatorButtons()}
         >
         </Button>
       </View>
@@ -105,21 +142,25 @@ export const HomeScreen = () => {
           backgroundColor="#333333"
           color="white"
           text="1"
+          function={() => concatInt()}
         />
         <Button
           backgroundColor="#333333"
           color="white"
           text="2"
+          function={() => concatInt()}
         />
         <Button
           backgroundColor="#333333"
           color="white"
           text="3"
+          function={() => concatInt()}
         />
         <Button
           backgroundColor='#FF9E0C'
           color="white"
           text="+"
+          function={() => operatorButtons()}
         >
           
         </Button>
@@ -134,16 +175,19 @@ export const HomeScreen = () => {
           backgroundColor="#333333"
           color="white"
           text="0"
+          function={() => concatInt()}
         />
         <Button
           backgroundColor="#333333"
           color="white"
           text="."
+          function={() => dotButton()}
         />
         <Button
           backgroundColor="#FF9E0C"
           color="white"
           text="="
+          function={() => resultButton()}
         />
       </View>
     </View>
