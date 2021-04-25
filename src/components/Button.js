@@ -7,7 +7,7 @@ export default function Button(props) {
       {/* add styling from StyleSheet and pass background colors from HomeScreen */}
       <TouchableHighlight
         style={[
-          styles.button,
+          props.largeButton ? styles.largeButton : styles.button,
           {
             backgroundColor: props.backgroundColor,
             justifyContent: 'center',
@@ -16,13 +16,14 @@ export default function Button(props) {
       >
         <View>
           {/* button text passed by props from HomeScreen */}
+          {/* styles added from StyleSheet and text colors passed by props from HomeScreen */}
+          {/* checks if button being used is the Large Zero one and renders
+          different styling if so.  */}
           <Text
             style={[
-              styles.text,
-              {color: props.color}
-
-            ]
-            }
+              props.largeButton ? styles.largeButtonText : styles.buttonText,
+              {color: props.color},
+            ]}
           >
             {props.text}
           </Text>
@@ -40,8 +41,17 @@ const styles = StyleSheet.create({
     width: 76,
     borderRadius: 38,
   },
-  text: {
+  buttonText: {
     textAlign: 'center',
     fontSize: 32,
   },
+  largeButton: {
+    width: 170,
+    height: 76,
+    borderRadius: 38,
+  },
+  largeButtonText: {
+    paddingLeft: 27,
+    fontSize: 32,
+  }
 });
