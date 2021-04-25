@@ -117,7 +117,7 @@ export const HomeScreen = () => {
       {/*   0       .       =   */}
       <View style={styles.row}>
         <Button
-          special
+          largeButton
           backgroundColor="#333333"
           color="white"
           text="0"

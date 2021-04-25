@@ -4,8 +4,8 @@ import { View, Text, StyleSheet, TouchableHighlight } from 'react-native';
 export default function Button(props) {
   return (
     <View>
+      {/* add styling from StyleSheet and pass background colors from HomeScreen */}
       <TouchableHighlight
-        underlayColor={'#C9C9C9'}
         style={[
           styles.button,
           {
@@ -17,9 +17,11 @@ export default function Button(props) {
         <View>
           {/* button text passed by props from HomeScreen */}
           <Text
-            style={
+            style={[
               styles.text,
               {color: props.color}
+
+            ]
             }
           >
             {props.text}
@@ -31,6 +33,7 @@ export default function Button(props) {
 
 }
 
+{/* Stylesheet for the buttons */}
 const styles = StyleSheet.create({
   button: {
     height: 76,
