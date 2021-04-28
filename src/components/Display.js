@@ -7,7 +7,7 @@ export default function Display(props) {
     /* Prints out the outcome in the calc */
     <View>
       <Text style={styles.text}>
-        {props.outcome}
+        {props.result}
       </Text>
     </View>
   );

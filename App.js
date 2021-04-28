@@ -10,6 +10,8 @@ const navigator = createStackNavigator(
     initialRouteName: "Home",
     defaultNavigationOptions: {
       title: "iOS Calculator",
+      //hide title header
+      headerShown: false
     },
   }
 );

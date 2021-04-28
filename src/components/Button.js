@@ -9,6 +9,7 @@ export default function Button(props) {
       {/* checks if button being used is the Large Zero one and renders
       different styling if so.  */}
       <TouchableHighlight
+        underlayColor={props.orange ? '#ffc56b' : '#c9c9c9'}
         onPress={props.function}
         style={[
           props.largeButton ? styles.largeButton : styles.button,
@@ -23,6 +24,11 @@ export default function Button(props) {
           {/* styles added from StyleSheet and text colors passed by props from HomeScreen */}
           {/* checks if button being used is the Large Zero one and renders
           different styling if so.  */}
+          {/* to check if there are any children icons being passed down instead of text */}
+          {/* in our case the operator icons replace the text */}
+          {props.children ? (
+            props.children
+          ) : (
           <Text
             style={[
               props.largeButton ? styles.largeButtonText : styles.buttonText,
@@ -31,6 +37,7 @@ export default function Button(props) {
           >
             {props.text}
           </Text>
+          )}
         </View>
       </TouchableHighlight>
     </View>
