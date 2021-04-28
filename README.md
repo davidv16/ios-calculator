@@ -1,6 +1,6 @@
 ![screenshot](iosCalc.png)
 
-# ios Calculator
+# iOS Calculator
 
 - ios calculator look a like created with React Native for both iOS and Android platforms
 
