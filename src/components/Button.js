@@ -1,5 +1,8 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableHighlight } from 'react-native';
+import { View, Text, StyleSheet, TouchableHighlight, Dimensions } from 'react-native';
+
+//destructured width properties from the devices window size for use in the large zero button width
+const { width: WIDTH } = Dimensions.get('window');
 
 export default function Button(props) {
   return (
@@ -60,7 +63,7 @@ const styles = StyleSheet.create({
   },
   //styling for the large zero button
   largeButton: {
-    width: 170,
+    width: (WIDTH - 4 * 76) / 5 + 2 * 76,
     height: 76,
     borderRadius: 38,
   },
