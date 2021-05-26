@@ -4,7 +4,17 @@ import { View, Text, StyleSheet, TouchableHighlight, Dimensions } from 'react-na
 //destructured width properties from the devices window size for use in the large zero button width
 const { width: WIDTH } = Dimensions.get('window');
 
-export default function Button(props) {
+interface Props {
+  backgroundColor: string
+  color?: string
+  text?: string
+  function: any
+  orange?: boolean
+  largeButton?: boolean
+  children?: any
+}
+
+export default function Button(props: Props) {
   return (
     <View>
       {/* add styling from StyleSheet and pass background colors from HomeScreen */}
@@ -32,14 +42,14 @@ export default function Button(props) {
           {props.children ? (
             props.children
           ) : (
-          <Text
-            style={[
-              props.largeButton ? styles.largeButtonText : styles.buttonText,
-              {color: props.color},
-            ]}
-          >
-            {props.text}
-          </Text>
+            <Text
+              style={[
+                props.largeButton ? styles.largeButtonText : styles.buttonText,
+                { color: props.color },
+              ]}
+            >
+              {props.text}
+            </Text>
           )}
         </View>
       </TouchableHighlight>
@@ -48,7 +58,7 @@ export default function Button(props) {
 
 }
 
-{/* Stylesheet for the buttons */}
+{/* Stylesheet for the buttons */ }
 const styles = StyleSheet.create({
   //styling for all the buttons
   button: {
